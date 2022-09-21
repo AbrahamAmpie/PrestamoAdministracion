@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"] - administracionPrestamo</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/images/favicon.svg" type="image/x-icon" />
+
+    <!-- font css -->
+    <link rel="stylesheet" href="~/fonts/feather.css">
+    <link rel="stylesheet" href="~/fonts/fontawesome.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg"></div>
+    <!-- [ Pre-loader ] End -->
+
+    <!-- [ navigation menu ] start -->
+    <nav class="pc-sidebar ">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="#" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="~/images/logo.svg" alt="" class="logo logo-lg">
+                    <img src="~/images/logo-sm.svg" alt="" class="logo logo-sm">
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-caption">
+                        <label>Administración</label>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link ">
+                            <span class="pc-micon"><i data-feather="users"></i></span>
+                            <span class="pc-mtext">Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link ">
+                            <span class="pc-micon"><i data-feather="user-check"></i></span>
+                            <span class="pc-mtext">Roles de Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-caption">
+                        <label>Prestamos</label>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link ">
+                            <span class="pc-micon"><i data-feather="file-text"></i></span>
+                            <span class="pc-mtext">Solicitudes de Prestamo</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-caption">
+                        <label>Pagos</label>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link ">
+                            <span class="pc-micon"><i data-feather="credit-card"></i></span>
+                            <span class="pc-mtext">Pagos a Prestamos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="pc-header ">
+        <div class="header-wrapper">
+            <div class="ml-auto">
+                <ul class="list-unstyled">
+                    <li class="dropdown pc-h-item">
+                        <a class="pc-head-link dropdown-toggle arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <span>
+                                <span class="user-name">Nombre Usuario</span>
+                                <span class="user-desc">Nombre Rol</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right pc-h-dropdown">
+                            <div class=" dropdown-header">
+                                <h6 class="text-overflow m-0">Bienvenido !</h6>
+                            </div>
+                            <a href="#!" class="dropdown-item">
+                                <i data-feather="user"></i>
+                                <span>Mi Cuenta</span>
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                                <i data-feather="power"></i>
+                                <span>Salir</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pc-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header"></div>
+            <!-- [ breadcrumb ] end -->
+
+            <!-- [ Main Content ] start -->
+            <div class="row">
+                @RenderBody()
+            </div>
+            <!-- [ Main Content ] end -->
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/vendor-all.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/feather.min.js"></script>
+    <script src="~/js/pcoded.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
