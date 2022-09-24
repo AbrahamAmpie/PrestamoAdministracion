@@ -1,3 +1,5 @@
+using administracionPrestamo.DataAccess;
+using administracionPrestamo.Extensiones;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +26,16 @@ namespace administracionPrestamo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.ConfiguracionContextoSql(Configuration);
+            services.ConfiguracionRepositorioWrapper();
+            services.AddSingleton<IConfiguration>(Configuration);
+
+            Contexto.ContextBD.CadenaConexion = Configuration.GetConnectionString("ServidorBD");
+            
+            services.Configure<IISServerOptions>(opciones =>
+            {
+                opciones.AllowSynchronousIO = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

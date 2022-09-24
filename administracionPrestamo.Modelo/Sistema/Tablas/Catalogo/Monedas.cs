@@ -16,6 +16,8 @@ namespace administracionPrestamo.Modelos.Sistema.Tablas.Catalogo
         public virtual int Nombre { get; set; }
         [Column("Codigo_ISO")]
         public virtual int Codigo_ISO { get; set; }
+        [Column("Estado")]
+        public virtual bool Estado { get; set; }
         [Column("IdPais")]
         public virtual int IdPais { get; set; }
     }

@@ -12,6 +12,6 @@ namespace administracionPrestamo.Modelos.Sistema
         [Column("UsuarioActualiza")]
         public virtual string UsuarioActualiza { get; set; }
         [Column("FechaActualiza")]
-        public virtual DateTime FechaActualiza { get; set; }
+        public virtual DateTime? FechaActualiza { get; set; }
     }
 }
