@@ -33,29 +33,42 @@ namespace administracionPrestamo.Controllers
             return View();
         }
 
-        public IActionResult Ciudades()
+        public ActionResult Ciudades()
         {
-            return View();
+            List<Ciudades> ListaCiudades = new List<Ciudades>();
+            ListaCiudades = _repositorioWrapper.RepositorioCiudades.BuscarPorCondicion(x => x.Estado).ToList();
+
+            return View(ListaCiudades);
         }
 
-        public IActionResult Monedas()
+        public ActionResult Monedas()
         {
-            return View();
+            List<Monedas> ListaMonedas = new List<Monedas>();
+            ListaMonedas = _repositorioWrapper.RepositorioMonedas.BuscarPorCondicion(x => x.Estado).ToList();
+
+            return View(ListaMonedas);
         }
 
-        public IActionResult Estados()
+        public ActionResult Estados()
         {
-            return View();
+            List<Estados> ListaEstados = new List<Estados>();
+            ListaEstados = _repositorioWrapper.RepositorioEstados.BuscarPorCondicion(x => x.Estado).ToList();
+            return View(ListaEstados);
         }
 
-        public IActionResult TipoIdentificaciones()
+        public ActionResult TipoIdentificaciones()
         {
-            return View();
+            List<TipoIdentificaciones> ListaTipoIdentificaciones = new List<TipoIdentificaciones>();
+            ListaTipoIdentificaciones = _repositorioWrapper.RepositorioTipoIdentificaciones.BuscarPorCondicion(x => x.Estado).ToList();
+            return View(ListaTipoIdentificaciones);
         }
 
-        public IActionResult EstadosCivil()
+        public ActionResult EstadosCivil()
         {
-            return View();
+            List<EstadosCiviles> ListaEstadosCiviles = new List<EstadosCiviles>();
+            ListaEstadosCiviles = _repositorioWrapper.RepositorioEstadosCiviles.BuscarPorCondicion(x => x.Estado).ToList();
+
+            return View(ListaEstadosCiviles);
         }
 
         // GET: CatalogoController

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace administracionPrestamo.Modelos.Sistema.Tablas.Catalogo
 {
-    [Table("EstadosCiviles", Schema = "catalogo")]
+    [Table("EstadosCivil", Schema = "catalogo")]
     public class EstadosCiviles : EntidadBase
     {
         [Key]
