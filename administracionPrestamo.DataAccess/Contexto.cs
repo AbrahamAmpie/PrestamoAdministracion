@@ -47,22 +47,22 @@ namespace administracionPrestamo.DataAccess
         {
             var ListaEntradas = ChangeTracker.Entries().Where(x => x.Entity is EntidadBase);
 
-            ListaEntradas.ToList().ForEach(delegate (EntityEntry EntradaEntidad)
-            {
-                EntidadBase Entidad = EntradaEntidad.Entity as EntidadBase;
+            //ListaEntradas.ToList().ForEach(delegate (EntityEntry EntradaEntidad)
+            //{
+            //    EntidadBase Entidad = EntradaEntidad.Entity as EntidadBase;
 
-                if (EntradaEntidad.State == EntityState.Added)
-                {
-                    Entidad.FechaRegistra = DateTime.Now;
-                    Entidad.FechaActualiza = DateTime.Now;
-                    Entidad.UsuarioRegistra = "";
-                    Entidad.UsuarioActualiza = "";
-                } else if (EntradaEntidad.State == EntityState.Modified)
-                {
-                    Entidad.FechaActualiza = DateTime.Now;
-                    Entidad.UsuarioActualiza = "";
-                }
-            });
+            //    if (EntradaEntidad.State == EntityState.Added)
+            //    {
+            //        Entidad.FechaRegistra = DateTime.Now;
+            //        Entidad.FechaActualiza = DateTime.Now;
+            //        Entidad.UsuarioRegistra = "";
+            //        Entidad.UsuarioActualiza = "";
+            //    } else if (EntradaEntidad.State == EntityState.Modified)
+            //    {
+            //        Entidad.FechaActualiza = DateTime.Now;
+            //        Entidad.UsuarioActualiza = "";
+            //    }
+            //});
 
             return await base.SaveChangesAsync();
         }

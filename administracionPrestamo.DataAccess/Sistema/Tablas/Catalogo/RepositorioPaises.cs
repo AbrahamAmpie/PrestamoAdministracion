@@ -12,23 +12,23 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Catalogo
 
         public void ActualizarPais(Paises pais)
         {
-            ActualizarPais(pais);
+            Actualizar(pais);
         }
 
         public void CrearPais(Paises pais)
         {
-            CrearPais(pais);
+            Crear(pais);
         }
 
         public void EliminarFiscamentePais(Paises pais)
         {
-            EliminarFiscamentePais(pais);
+            EliminarFisicamente(pais);
         }
 
         public void EliminarPais(Paises pais)
         {
             pais.Estado = false;
-            ActualizarPais(pais);
+            Actualizar(pais);
         }
     }
 }

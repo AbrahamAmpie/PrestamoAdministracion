@@ -12,12 +12,12 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Prestamo
 
         public void ActualizarCuenta(Cuentas cuenta)
         {
-            ActualizarCuenta(cuenta);
+            Actualizar(cuenta);
         }
 
         public void CrearCuenta(Cuentas cuenta)
         {
-            CrearCuenta(cuenta);
+            Crear(cuenta);
         }
     }
 }

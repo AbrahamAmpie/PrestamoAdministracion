@@ -12,23 +12,23 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Catalogo
 
         public void ActualizarCiudad(Ciudades ciudad)
         {
-            ActualizarCiudad(ciudad);
+            Actualizar(ciudad);
         }
 
         public void CrearCiudad(Ciudades ciudad)
         {
-            CrearCiudad(ciudad);
+            Crear(ciudad);
         }
 
         public void EliminarCiudad(Ciudades ciudad)
         {
             ciudad.Estado = false;
-            ActualizarCiudad(ciudad);
+            Actualizar(ciudad);
         }
 
         public void EliminarFiscamenteCiudad(Ciudades ciudad)
         {
-            EliminarFiscamenteCiudad(ciudad);
+            EliminarFisicamente(ciudad);
         }
     }
 }

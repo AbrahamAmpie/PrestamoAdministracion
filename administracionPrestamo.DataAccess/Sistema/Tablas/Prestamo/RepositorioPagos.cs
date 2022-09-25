@@ -12,12 +12,12 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Prestamo
 
         public void ActualizarPago(Pagos pago)
         {
-            ActualizarPago(pago);
+            Actualizar(pago);
         }
 
         public void CrearPago(Pagos pago)
         {
-            CrearPago(pago);
+            Crear(pago);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>@ViewData["Title"] - administracionPrestamo</title>
+    <title>@ViewData["Title"] - Prestamos NI</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/style.css" />
+
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <!-- [ Pre-loader ] start -->
@@ -151,10 +153,6 @@
     <!-- [ Main Content ] start -->
     <div class="pc-container">
         <div class="pcoded-content">
-            <!-- [ breadcrumb ] start -->
-            <div class="page-header"></div>
-            <!-- [ breadcrumb ] end -->
-
             <!-- [ Main Content ] start -->
             <div>
                 @RenderBody()
@@ -170,6 +168,7 @@
     <script src="~/js/feather.min.js"></script>
     <script src="~/js/pcoded.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>

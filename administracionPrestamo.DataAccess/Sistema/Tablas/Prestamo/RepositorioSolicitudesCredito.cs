@@ -13,12 +13,12 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Prestamo
 
         public void ActualizarSolicitudCredito(SolicitudesCredito solicitudCredito)
         {
-            ActualizarSolicitudCredito(solicitudCredito);
+            Actualizar(solicitudCredito);
         }
 
         public void CrearSolicitudCredito(SolicitudesCredito solicitudCredito)
         {
-            CrearSolicitudCredito(solicitudCredito);
+            Crear(solicitudCredito);
         }
     }
 }

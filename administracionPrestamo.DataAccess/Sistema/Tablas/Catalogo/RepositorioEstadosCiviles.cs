@@ -12,23 +12,23 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Catalogo
 
         public void ActualizarEstadoCivil(EstadosCiviles estadoCivil)
         {
-            ActualizarEstadoCivil(estadoCivil);
+            Actualizar(estadoCivil);
         }
 
         public void CrearEstadoCivil(EstadosCiviles estadoCivil)
         {
-            CrearEstadoCivil(estadoCivil);
+            Crear(estadoCivil);
         }
 
         public void EliminarEstadoCivil(EstadosCiviles estadoCivil)
         {
             estadoCivil.Estado = false;
-            EliminarEstadoCivil(estadoCivil);
+            Actualizar(estadoCivil);
         }
 
         public void EliminarFiscamenteEstadoCivil(EstadosCiviles estadoCivil)
         {
-            EliminarFiscamenteEstadoCivil(estadoCivil);
+            EliminarFisicamente(estadoCivil);
         }
     }
 }

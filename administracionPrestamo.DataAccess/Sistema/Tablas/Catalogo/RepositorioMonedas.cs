@@ -12,23 +12,23 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Catalogo
 
         public void ActualizarMoneda(Monedas moneda)
         {
-            ActualizarMoneda(moneda);
+            Actualizar(moneda);
         }
 
         public void CrearMoneda(Monedas moneda)
         {
-            CrearMoneda(moneda);
+            Crear(moneda);
         }
 
         public void EliminarFiscamenteMoneda(Monedas moneda)
         {
-            EliminarFiscamenteMoneda(moneda);
+            EliminarFisicamente(moneda);
         }
 
         public void EliminarMoneda(Monedas moneda)
         {
             moneda.Estado = false;
-            ActualizarMoneda(moneda);
+            Actualizar(moneda);
         }
     }
 }

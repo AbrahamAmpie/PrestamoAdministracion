@@ -3,8 +3,10 @@ using administracionPrestamo.Modelos.Sistema.Tablas.Catalogo;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace administracionPrestamo.Controllers
 {
@@ -19,6 +21,7 @@ namespace administracionPrestamo.Controllers
             _configuracion = configuracion;
         }
 
+        #region Paises
         public ActionResult Paises()
         {
             List<Paises> ListaPaises = new List<Paises>();
@@ -27,6 +30,24 @@ namespace administracionPrestamo.Controllers
 
             return View(ListaPaises);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public JsonResult GuardarPais(Paises pais)
+        {
+            try
+            {
+                _repositorioWrapper.RepositorioPaises.CrearPais(pais);
+                _repositorioWrapper.GuardarAsync();
+
+                return Json("Guardado Exitoso");
+            }
+            catch
+            {
+                return Json("Error");
+            }
+        }
+        #endregion
 
         public IActionResult Usuario()
         {

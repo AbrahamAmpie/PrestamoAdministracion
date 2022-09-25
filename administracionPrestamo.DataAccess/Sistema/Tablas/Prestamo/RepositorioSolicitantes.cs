@@ -12,12 +12,12 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Prestamo
 
         public void ActualizarSolicitante(Solicitantes solicitante)
         {
-            ActualizarSolicitante(solicitante);
+            Actualizar(solicitante);
         }
 
         public void CrearSolicitante(Solicitantes solicitante)
         {
-            CrearSolicitante(solicitante);
+            Crear(solicitante);
         }
     }
 }

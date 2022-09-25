@@ -12,23 +12,23 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Catalogo
 
         public void ActualizarTipoIdentificacion(TipoIdentificaciones tipoIdentificacion)
         {
-            ActualizarTipoIdentificacion(tipoIdentificacion);
+            Actualizar(tipoIdentificacion);
         }
 
         public void CrearTipoIdentificacion(TipoIdentificaciones tipoIdentificacion)
         {
-            CrearTipoIdentificacion(tipoIdentificacion);
+            Crear(tipoIdentificacion);
         }
 
         public void EliminarFiscamenteTipoIdentificacion(TipoIdentificaciones tipoIdentificacion)
         {
-            EliminarFiscamenteTipoIdentificacion(tipoIdentificacion);
+            EliminarFisicamente(tipoIdentificacion);
         }
 
         public void EliminarTipoIdentificacion(TipoIdentificaciones tipoIdentificacion)
         {
             tipoIdentificacion.Estado = false;
-            ActualizarTipoIdentificacion(tipoIdentificacion);
+            Actualizar(tipoIdentificacion);
         }
     }
 }

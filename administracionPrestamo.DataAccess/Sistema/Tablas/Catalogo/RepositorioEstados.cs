@@ -12,23 +12,23 @@ namespace administracionPrestamo.DataAccess.Sistema.Tablas.Catalogo
 
         public void ActualizarEstado(Estados estado)
         {
-            ActualizarEstado(estado);
+            Actualizar(estado);
         }
 
         public void CrearEstado(Estados estado)
         {
-            CrearEstado(estado);
+            Crear(estado);
         }
 
         public void EliminarEstado(Estados estado)
         {
             estado.Estado = false;
-            ActualizarEstado(estado);
+            Actualizar(estado);
         }
 
         public void EliminarFiscamenteEstado(Estados estado)
         {
-            EliminarFiscamenteEstado(estado);
+            EliminarFisicamente(estado);
         }
     }
 }
