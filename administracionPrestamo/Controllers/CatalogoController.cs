@@ -28,6 +28,36 @@ namespace administracionPrestamo.Controllers
             return View(ListaPaises);
         }
 
+        public IActionResult Usuario()
+        {
+            return View();
+        }
+
+        public IActionResult Ciudades()
+        {
+            return View();
+        }
+
+        public IActionResult Monedas()
+        {
+            return View();
+        }
+
+        public IActionResult Estados()
+        {
+            return View();
+        }
+
+        public IActionResult TipoIdentificaciones()
+        {
+            return View();
+        }
+
+        public IActionResult EstadosCivil()
+        {
+            return View();
+        }
+
         // GET: CatalogoController
         public ActionResult Index()
         {

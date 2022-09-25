@@ -42,7 +42,7 @@
                         <label>Administración</label>
                     </li>
                     <li class="pc-item pc-hasmenu">
-                        <a asp-controller="Home" asp-action="Usuario" class="pc-link ">
+                        <a href="#!" class="pc-link ">
                             <span class="pc-micon"><i data-feather="users"></i></span>
                             <span class="pc-mtext">Usuarios</span>
                         </a>
@@ -75,9 +75,39 @@
                         <label>Catalogos</label>
                     </li>
                     <li class="pc-item pc-hasmenu">
+                        <a type="button" asp-controller="Catalogo" asp-action="Usuario" class="pc-link ">
+                            <span class="pc-micon"><i data-feather="users"></i></span>
+                            <span class="pc-mtext">Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
                         <a type="button" class="pc-link" asp-controller="Catalogo" asp-action="Paises">
                             <span class="pc-micon"><i data-feather="globe"></i></span>
                             <span class="pc-mtext">Paises</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a type="button" class="pc-link" asp-controller="Catalogo" asp-action="Ciudades">
+                            <span class="pc-micon"><i data-feather="compass"></i></span>
+                            <span class="pc-mtext">Ciudades</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a type="button" class="pc-link" asp-controller="Catalogo" asp-action="EstadosCivil">
+                            <span class="pc-micon"><i data-feather="eye"></i></span>
+                            <span class="pc-mtext">EstadosCivil</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a type="button" class="pc-link" asp-controller="Catalogo" asp-action="Monedas">
+                            <span class="pc-micon"><i data-feather="slack"></i></span>
+                            <span class="pc-mtext">Monedas</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a type="button" class="pc-link" asp-controller="Catalogo" asp-action="TipoIdentificaciones">
+                            <span class="pc-micon"><i data-feather="sidebar"></i></span>
+                            <span class="pc-mtext">TipoIdentificaciones</span>
                         </a>
                     </li>
                 </ul>
