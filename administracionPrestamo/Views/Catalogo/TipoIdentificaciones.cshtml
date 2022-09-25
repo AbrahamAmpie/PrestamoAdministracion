@@ -89,7 +89,11 @@
                                         <td>
                                             @if (item.Estado == true)
                                             {
-                                                <span>ACTIVO</span>
+                                                <span class="badge badge-success">Activo</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-warning">Inactivo</span>
                                             }
                                         </td>
                                         <td>

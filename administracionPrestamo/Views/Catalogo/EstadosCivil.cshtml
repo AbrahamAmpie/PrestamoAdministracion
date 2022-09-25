@@ -81,7 +81,6 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                //string valorClase = (a % 2 == 0) ? "even" : "odd";
                                     <tr>
                                         <td>
                                             @Html.DisplayFor(modelItem => item.Descripcion)
@@ -89,7 +88,9 @@
                                         <td>
                                             @if (item.Estado == true)
                                             {
-                                                <span>ACTIVO</span>
+                                               <span class="badge badge-success">Activo</span>
+                                            }else{
+                                                <span class="badge badge-warning">Inactivo</span>
                                             }
                                         </td>
                                         <td>
