@@ -19,5 +19,7 @@ namespace administracionPrestamo.Modelos.Sistema.Tablas.Catalogo
 
         [Column("ISO_Alfa3")]
         public virtual string ISO_Alfa3 { get; set; }
+        [Column("Estado")]
+        public virtual bool Estado { get; set; }
     }
 }

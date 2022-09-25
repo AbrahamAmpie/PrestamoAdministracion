@@ -24,6 +24,8 @@ namespace administracionPrestamo.Modelos.Sistema.Tablas.Prestamo
         public virtual decimal MontoInteres { get; set; }
         [Column("TotalPagar")]
         public virtual decimal TotalPagar { get; set; }
+        [Column("Estado")]
+        public virtual bool Estado { get; set; }
         [ForeignKey("SolicitudesCredito")]
         public virtual int IdSolicitudesCredito { get; set; }
     }

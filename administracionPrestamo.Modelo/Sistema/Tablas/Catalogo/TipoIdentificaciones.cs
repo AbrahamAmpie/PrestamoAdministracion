@@ -14,5 +14,7 @@ namespace administracionPrestamo.Modelos.Sistema.Tablas.Catalogo
         public virtual int IdTipoIdentificacion { get; set; }
         [Column("Descripcion")]
         public virtual string Descripcion { get; set; }
+        [Column("Estado")]
+        public virtual bool Estado { get; set; }
     }
 }
