@@ -42,7 +42,7 @@
                         <label>Administración</label>
                     </li>
                     <li class="pc-item pc-hasmenu">
-                        <a href="#!" class="pc-link ">
+                        <a asp-controller="Home" asp-action="Usuario" class="pc-link ">
                             <span class="pc-micon"><i data-feather="users"></i></span>
                             <span class="pc-mtext">Usuarios</span>
                         </a>
@@ -117,7 +117,7 @@
             <!-- [ breadcrumb ] end -->
 
             <!-- [ Main Content ] start -->
-            <div class="row">
+            <div>
                 @RenderBody()
             </div>
             <!-- [ Main Content ] end -->
