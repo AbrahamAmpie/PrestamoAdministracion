@@ -10,12 +10,12 @@ namespace administracionPrestamo.Modelos.Sistema.Tablas.Catalogo
     public class Ciudades : EntidadBase
     {
         [Key]
-        [Column("IdMoneda")]
-        public virtual int IdMoneda { get; set; }
+        [Column("IdCiudad")]
+        public virtual int IdCiudad { get; set; }
         [Column("Nombre")]
-        public virtual int Nombre { get; set; }
+        public virtual string Nombre { get; set; }
         [Column("Codigo_ISO")]
-        public virtual int Codigo_ISO { get; set; }
+        public virtual string Codigo_ISO { get; set; }
         [Column("Estado")]
         public virtual bool Estado { get; set; }
         [Column("IdPais")]
